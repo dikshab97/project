@@ -1,197 +1,123 @@
-*{
-    margin: 0;
-    padding: 0;
-    user-select: none;
-}
-body{
-    background: #e9eaea;
-    font-family: 'Roboto',sans-serif;
+#team {
+  background: #eee !important;
 }
 
-.saree1 {
-    display: flex;
-    flex: 1 1 auto;
-    background:  #fff;
-    width:700px;
-    height: 190px;
-    box-sizing: border-box;
-    border: 2px solid  #34b3a0;
-    
-    
-}
-.btn{
-    width: 50%;
-    background: #34b3a0;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    position :right;
-    
-  }
-
-
-.saree2 {
-    display: flex;
-    flex: 1 1 auto;
-    background:  #fff;
-    width:700px;
-    height: 190px;
-    box-sizing: border-box;
-    border: 2px solid  #34b3a0;
-    
-     
-
-}
-.btn1{
-    width: 50%;
-    background: #34b3a0;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    position :right;
-    
-  }
-
-  .saree3 {
-    display: flex;
-    flex: 1 1 auto;
-    background:  #fff;
-    width:700px;
-    height: 190px;
-    box-sizing: border-box;
-    border: 2px solid  #34b3a0;
-    
-     
-
-}
-.btn2{
-    width: 50%;
-    background: #34b3a0;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    position :right;
-    
-  }
-
-  body {
-	background-color:#ededed;
-	font-family:"Segoe UI";
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  box-shadow: none;
+  outline: none;
 }
 
-/*----------2.Headings & Buttons----------*/
-h3 {
-	font-size:1.2em;
-	font-weight:600;
-	text-transform:capitalize;
-	margin:0 0 10px 0;
-	padding:0;
-	color:#555555;
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
 }
-.btn-styled {
-	background-color:transparent;
-	border:#666666 1.9px solid;
-	color:#666666;
-	font-size:0.85em;
-	border-radius:30px;
-	padding:5px 13px 4px 13px;
-	margin:10px 0 10px 0;
+
+section {
+  padding: 60px 0;
 }
-.btn-styled:hover, .btn-styled:active  {
-	background-color:#ededed;
-	border-color:#ededed;
-	color:#555555;
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
 }
-.btn-styled:focus {
-	outline:0 !important;
+
+#team .card {
+  border: none;
+  background: #ffffff;
 }
-/*----------3.Cards----------*/
-.card {
-	position: relative;
-  	margin:2% 5px 2% 5px;
-  	background-color: #fff;
-  	transition: box-shadow .25s;
-  	border-radius: 2px;
-   	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-	padding:0;
-	min-width:400px;
-	max-width:500px;
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
 }
-.card .card-image img {
-  display: block;
-  border-radius: 2px 2px 0 0;
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
   position: relative;
-  left: 0;
-  right: 0;
+}
+
+.frontside {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
   top: 0;
-  bottom: 0;
-  width: 100%;
-}
-.card .card-content {
-  padding: 15px 10px 0 0;
-  border-radius: 0 0 2px 2px;
-}
-
-.card .card-content p {
-  margin:0;
-  font-size:1.45rem;
-  color: #555555;
-}
-/*----3.a.Horizontal----*/
-.card.horizontal .card-image img {
-	height:100px;
-	width:100px;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
 
-.card.horizontal {
-  	display: -webkit-flex;
-  	display: -ms-flexbox;
-  	display: flex;
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
 }
-.card.horizontal.small .card-image,
- .card.horizontal.medium .card-image,
-  .card.horizontal.large .card-image {
-  	height: 100%;
-  	max-height: none;
-  	overflow: visible;
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
 }
-.card.horizontal .card-image img {
-  	width:150px;
-	height:150px;
-	margin-right:20px;
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
 }
-.card.horizontal .card-stacked {
-  	-webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  	-webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  	position: relative;
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
 }
-.card.horizontal .card-stacked .card-content {
-  	-webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-	flex-grow: 1;
-}
-.card .card-image {
-  position: relative;
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
